@@ -1,0 +1,54 @@
+<!-- task-list.component.html -->
+<div class="col-12 outerListDiv">
+  
+  <div class="col-6 OuterTable outerTableList">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Due Date</th>
+          <th>Priority</th>
+          <th>Status</th>
+          
+          <th>Edit</th>
+          <th>Delete</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let task of dataList" (click)="selectTask(task)" [class.selected-row]="task === selectedTask">
+          <td>{{ task.title }}</td>
+          <td>{{ task.dueDate }}</td>
+          <td>
+            <div *ngIf="task.priority === 'high'" class="highindicator">High</div>
+            <div *ngIf="task.priority === 'medium'" class="mediumindicator">Medium</div>
+            <div *ngIf="task.priority === 'low'" class="lowIndicator">Low</div>
+          </td>
+          <td>{{ task.status }}</td>
+         
+          <td><img class="imgSize" src="../../assets/edit.png" alt="Completed" (click)="editTask(task)"></td>
+          <td><img class="imgSize" src="../../assets/delete.png" alt="Completed" (click)="deleteTask(task)"></td>
+        </tr>
+  
+        <tr>
+  
+        </tr>
+      </tbody>
+      <!-- <tbody *ngIf="DataListEmpty">
+        <tr class="border-bottom">
+            <td colspan="9" class="text-center p-3">Record not found</td>
+        </tr>
+      </tbody> -->
+      
+    
+    </table>
+  </div>
+  <div class="col-6 OuterTable outerTableDetails " *ngIf="selectedTask">
+    <h2>Details</h2>
+    <div class="col-12"><span>Title:</span> {{ selectedTask.title }}</div>
+    <div class="col-12"><span>Due Date:</span> {{ selectedTask.dueDate }}</div>
+    <div class="col-12"><span>Priority:</span> {{ selectedTask.priority }}</div>
+    <div class="col-12"><span>Status:</span> {{ selectedTask.status }}</div>
+  </div>
+</div>

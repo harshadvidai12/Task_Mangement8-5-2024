@@ -1,0 +1,54 @@
+
+$font-family1:Arial;
+
+
+.textRequired{
+    color: red;
+}
+* {
+    font-family:$font-family1
+}
+
+
+.outerEditForm{
+    display: flex;
+}
+.OuterInputField{
+        justify-content: center;
+    display: flex;
+    .outerInput{
+        margin: 0px 10px;
+    }
+}
+input {
+    height: 30px;
+    width: 200px;
+}
+select {
+    height: 38px;
+    width: 200px;
+}
+.commonButton{
+    width: 100px;
+    height: 15px;
+}
+.saveButton{
+        background-color: black;
+        color: white;
+        margin: 0px 42px;
+        height: 50px;
+        width: 125px;
+        border-radius: 37px;
+}
+.cancelButton{
+    background-color: rgb(223, 214, 202);
+    color: black;
+    margin: 0px 42px;
+    height: 50px;
+    width: 125px;
+    border-radius: 37px;
+}
+.buttonOuter{
+    display: flex;
+    justify-content: center;
+}

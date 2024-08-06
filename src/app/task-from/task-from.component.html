@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div>
+                <form [formGroup]="taskForm">
+                <div class="row OuterInputField">
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 outerInput">
+                            <label for="title">Title :</label>
+                            <input type="text" id="title" name="title" formControlName="title"  placeholder="Enter the Title"><br><br>
+                        </div>
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 outerInput">
+                            <label for="status">Status :</label>
+                            <select class="form-select" formControlName="status">
+                                <option value="null" selected>Select</option>
+                                <option value="completed">Completed</option>
+                                <option value="incompleted"> Incompleted </option>
+                                <option value="parCompleted">Partial- Completed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 outerInput">
+                            <form>
+                                <label for="priority">Priority :</label>
+                                <select class="form-select" formControlName="priority">
+                                    <option value="null" selected>Select</option>
+                                    <option value="high">High</option>
+                                    <option value="medium"> Medium</option>
+                                    <option value="low">Low</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-md-12 col-xl-12 col-lg-12 col-sm-12 outerInput">
+                            <form>
+                                <label for="duedate">Due Date :</label>
+                                <input type="date" id="duedate" name="duedate" formControlName="dueDate"><br><br>
+                            </form>
+                        </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buttonOuter">
+    
+    <button class="cancelButton" (click)="clearform()">Clear Form</button>
+    <button class="saveButton"  (click)="onSubmit()">Save </button>
+</div>

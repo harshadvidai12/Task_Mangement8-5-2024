@@ -1,0 +1,44 @@
+$font-family1:Arial;
+* {
+    font-family:$font-family1
+}   
+.heading{
+    justify-content: center;
+    display: flex;
+    font-size: 36px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 15px;
+    margin: 0px;
+    flex-wrap: nowrap;
+    padding: 15px 0px;
+ 
+}
+.outerHeading{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    height: 50px;
+}
+.OuterSubHeading{
+    display: flex;
+    justify-content: space-between;
+    p{
+        font-size: 18px;
+        padding: 0px 15px;
+        color:red
+    }
+}
+.buttonClass{
+        margin-left:  15px ;
+        margin-top: 5px;
+        width: 190px;
+        border-radius: 10px;
+        height: 44px;
+        border: 1px solid #000000;
+        padding: 11px, 40px, 11px, 40px;
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+}
+
